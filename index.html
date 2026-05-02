@@ -228,7 +228,8 @@ section + section{border-top:1px solid var(--line-soft)}
 
 @media (max-width: 980px){
  .hero-grid, .about-grid, .ways-grid, .who-grid,
- .offer-grid, .ig-head, .faq-grid, .foot-grid, .hero-bottom {
+ .offer-grid, .classes-head, .classes-grid,
+ .ig-head, .faq-grid, .foot-grid, .hero-bottom {
  grid-template-columns: 1fr !important;
  gap: 32px !important;
  }
@@ -236,6 +237,7 @@ section + section{border-top:1px solid var(--line-soft)}
  .nav-links{display:none !important}
  .nav-cta{display:none !important}
  .nav-burger{display:inline-flex !important}
+ .class-card{grid-template-columns: 1fr !important}
  .hero-card{
  bottom: -16px !important;
  left: 16px !important;
@@ -252,6 +254,8 @@ section + section{border-top:1px solid var(--line-soft)}
  .stats-grid .display{font-size: 40px !important}
  .offer-card{padding: 22px !important}
  .offer-card h3{font-size: 32px !important}
+ .class-card{padding: 20px !important}
+ .class-card h3{font-size: 32px !important}
  .faq-q{font-size: 19px !important}
  .about-portrait{position: static !important}
  .about-portrait .ph-secondary{margin-left: 30px !important}
@@ -374,6 +378,7 @@ function Nav() {
  const links = [
  ["The practice", "#practice"],
  ["For you", "#who"],
+ ["Classes", "#classes"],
  ["Offerings", "#offerings"],
  ["FAQ", "#faq"],
  ];
@@ -404,6 +409,7 @@ function Nav() {
  </span>
  </a>
 
+ <div className="nav-right" style={{ display: "flex", alignItems: "center", gap: 28 }}>
  <nav style={{ display: "flex", gap: 28, alignItems: "center" }} className="nav-links">
  {links.map(([label, href]) => (
  <a key={href} href={href} className="nav-link"
@@ -442,6 +448,7 @@ function Nav() {
  }} />
  </div>
  </button>
+ </div>
  </div>
 
  {/* Mobile drawer */}
@@ -828,6 +835,179 @@ function Who() {
 }
 
 /* ============================================================
+ Classes, six ways in
+============================================================ */
+const CLASSES = [
+ {
+ name: "Slow Flow",
+ tag: "Vinyasa",
+ duration: "60 min",
+ level: "All levels",
+ desc: "A gentle, breath-led sequence. We move through familiar shapes slowly enough that you can actually feel them.",
+ good: ["yoga for beginners", "stress relief", "mobility"],
+ img: "[slow flow · cat-cow · morning light]",
+ },
+ {
+ name: "Yoga Nidra",
+ tag: "Restorative",
+ duration: "45 min",
+ level: "Everyone",
+ desc: "A guided rest. You lie down, I talk you toward sleep's edge, and your nervous system does the rest. Profound on tired weeks.",
+ good: ["yoga nidra", "insomnia", "deep rest"],
+ img: "[nidra · bolster · candle]",
+ },
+ {
+ name: "Alignment Hatha",
+ tag: "Hatha",
+ duration: "75 min",
+ level: "Beginner +",
+ desc: "Iyengar-rooted. We hold poses long enough to learn them. Props, precision, and a great deal of patience.",
+ good: ["yoga for back pain", "posture", "strength"],
+ img: "[trikonasana · block · mirror]",
+ },
+ {
+ name: "Yin & Breath",
+ tag: "Yin",
+ duration: "60 min",
+ level: "All levels",
+ desc: "Long floor holds paired with pranayama. For the connective tissue, the parasympathetic nervous system, and the parts of you that are tired of trying.",
+ good: ["yin yoga", "anxiety", "flexibility"],
+ img: "[yin · butterfly · soft window]",
+ },
+ {
+ name: "Sunrise 1:1",
+ tag: "Private",
+ duration: "60 min",
+ level: "Custom",
+ desc: "A class built for you. Your body, your week, your goals. Online or in-studio in Siliguri. Pre-conversation included.",
+ good: ["private yoga", "1:1 coaching", "yoga near me"],
+ img: "[1:1 · close · adjustments]",
+ },
+ {
+ name: "New Moon Circle",
+ tag: "Workshop",
+ duration: "90 min",
+ level: "Open",
+ desc: "Once a month. A long restorative practice, a short reading, tea afterward. Online and free for first-timers.",
+ good: ["yoga workshop", "community", "meditation"],
+ img: "[circle · mat · tea · siliguri]",
+ },
+];
+
+function Classes() {
+ return (
+ <section id="classes" style={{ background: "var(--sand)", borderTop: "1px solid var(--line)" }}>
+ <div className="wrap">
+ <div className="rule reveal" style={{ marginBottom: 56 }}>
+ <span>05 · Classes</span>
+ </div>
+
+ <div className="reveal classes-head" style={{
+ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 60,
+ alignItems: "end", marginBottom: 80,
+ }}>
+ <h2 className="h-serif" style={{ fontSize: "clamp(40px, 5.6vw, 76px)" }}>
+ Six ways in.
+ <span style={{ fontStyle: "italic", color: "var(--terracotta)" }}> One practice.</span>
+ </h2>
+ <p className="body-lede" style={{ fontSize: 19 }}>
+ Whether you've never touched a mat or you've been holding crow for a decade, there's a
+ shape of practice here that meets you where today actually is.
+ </p>
+ </div>
+
+ <div style={{
+ display: "grid",
+ gridTemplateColumns: "repeat(2, 1fr)",
+ gap: 28,
+ }} className="classes-grid">
+ {CLASSES.map((c, i) => (
+ <ClassCard key={c.name} c={c} i={i} />
+ ))}
+ </div>
+ </div>
+ </section>
+ );
+}
+
+function ClassCard({ c, i }) {
+ const [hover, setHover] = useState(false);
+ return (
+ <article className="reveal class-card"
+ onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
+ style={{
+ background: "var(--cream)",
+ borderRadius: 24,
+ padding: 28,
+ border: "1px solid var(--line)",
+ display: "grid",
+ gridTemplateColumns: "0.9fr 1.1fr",
+ gap: 24,
+ transition: "transform .35s ease, box-shadow .35s ease",
+ transform: hover ? "translateY(-3px)" : "none",
+ boxShadow: hover ? "0 22px 50px rgba(43,38,32,0.08)" : "0 1px 0 rgba(43,38,32,0.02)",
+ }}
+ >
+ <Placeholder caption={c.img} aspect="4/5" />
+
+ <div style={{ display: "flex", flexDirection: "column" }}>
+ <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+ <span className="eyebrow">{String(i + 1).padStart(2, "0")} · {c.tag}</span>
+ <span style={{ fontFamily: "var(--f-mono)", fontSize: 11, color: "var(--ink-mute)" }}>
+ {c.duration}
+ </span>
+ </div>
+
+ <h3 style={{
+ fontFamily: "var(--f-display)",
+ fontSize: 40, fontWeight: 350,
+ letterSpacing: "-0.02em",
+ marginTop: 12, lineHeight: 1.05,
+ }}>
+ {c.name}
+ </h3>
+
+ <p style={{ fontSize: 15, color: "var(--ink-soft)", marginTop: 12, flex: 1 }}>
+ {c.desc}
+ </p>
+
+ <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 16 }}>
+ {c.good.map((g) => (
+ <span key={g} style={{
+ fontFamily: "var(--f-mono)",
+ fontSize: 10.5, letterSpacing: "0.04em",
+ color: "var(--ink-mute)",
+ border: "1px solid var(--line)",
+ padding: "5px 9px",
+ borderRadius: 999,
+ }}>{g}</span>
+ ))}
+ </div>
+
+ <div style={{
+ marginTop: 22, paddingTop: 18,
+ borderTop: "1px solid var(--line)",
+ display: "flex", justifyContent: "space-between", alignItems: "center",
+ }}>
+ <span style={{ fontSize: 13, color: "var(--ink-mute)" }}>{c.level}</span>
+ <a href={waLink(`Hi Komal, I'd like to book ${c.name}.`)} target="_blank" rel="noopener"
+ style={{
+ display: "inline-flex", alignItems: "center", gap: 8,
+ fontSize: 14, color: "var(--ink)", fontWeight: 500,
+ }}>
+ Book on WhatsApp
+ <span style={{
+ transition: "transform .25s ease",
+ transform: hover ? "translateX(4px)" : "none",
+ }}>→</span>
+ </a>
+ </div>
+ </div>
+ </article>
+ );
+}
+
+/* ============================================================
  Offerings, ways to practice together
 ============================================================ */
 const OFFERINGS = [
@@ -889,7 +1069,7 @@ function Offerings() {
  <section id="offerings">
  <div className="wrap">
  <div className="rule reveal" style={{ marginBottom: 56 }}>
- <span>05 · Offerings</span>
+ <span>06 · Offerings</span>
  </div>
 
  <div className="reveal" style={{
@@ -997,7 +1177,7 @@ function Quote() {
  <section style={{ background: "var(--sand)", borderTop: "1px solid var(--line)" }}>
  <div className="wrap">
  <div className="rule reveal" style={{ marginBottom: 48 }}>
- <span>06 · A note</span>
+ <span>07 · A note</span>
  </div>
  <h2 className="h-serif reveal" style={{
  fontSize: "clamp(40px, 6vw, 84px)", maxWidth: 980,
@@ -1049,7 +1229,7 @@ function Instagram() {
  <section id="ig">
  <div className="wrap">
  <div className="rule reveal" style={{ marginBottom: 48 }}>
- <span>07 · Field notes · @releaseandrealize</span>
+ <span>08 · Field notes · @releaseandrealize</span>
  </div>
 
  <div className="reveal" style={{
@@ -1138,7 +1318,7 @@ function FAQ() {
  <section id="faq" style={{ background: "var(--cream)" }}>
  <div className="wrap">
  <div className="rule reveal" style={{ marginBottom: 56 }}>
- <span>08 · Questions</span>
+ <span>09 · Questions</span>
  </div>
 
  <div style={{ display: "grid", gridTemplateColumns: "0.8fr 1.2fr", gap: 80 }} className="faq-grid">
@@ -1329,6 +1509,7 @@ function App(){
  <Practice />
  <Ways />
  <Who />
+ <Classes />
  <Offerings />
  <Quote />
  <Instagram />
