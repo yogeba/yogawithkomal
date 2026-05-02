@@ -1,0 +1,1243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Yoga with Komal — Move with awareness · Embodied Hatha-Vinyasa, online & in person</title>
+<meta name="description" content="A somatic approach to movement with Komal — embodied Hatha-Vinyasa, breath awareness, chanting, and reflection. Group classes, 1:1 sessions, and themed gatherings. Classes begin May 5." />
+<meta name="keywords" content="yoga with komal, embodied yoga, somatic yoga, hatha vinyasa, yoga for beginners, yoga nidra, online yoga india, pranayama, mindful movement" />
+
+<meta property="og:title" content="Yoga with Komal — Move with awareness, come back home to yourself" />
+<meta property="og:description" content="A somatic approach to movement. Embodied Hatha-Vinyasa, online & in person." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,30..100;1,9..144,300..600,30..100&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+/* ------------------------------------------------------------------
+   Yoga with Komal — earthy editorial system
+------------------------------------------------------------------ */
+:root{
+  --cream:#F5EFE6;
+  --sand:#EDE3D2;
+  --sand-2:#E2D5BE;
+  --terracotta:#C97B5A;
+  --terracotta-deep:#A85F40;
+  --clay:#8B5E3C;
+  --moss:#6B7A4F;
+  --ink:#2B2620;
+  --ink-soft:#4A4138;
+  --ink-mute:#7A6F62;
+  --line:rgba(43,38,32,0.12);
+  --line-soft:rgba(43,38,32,0.06);
+
+  --f-display:"Fraunces", "Cormorant Garamond", Georgia, serif;
+  --f-body:"Inter Tight", "Inter", system-ui, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, monospace;
+
+  --r-sm:6px; --r:12px; --r-lg:20px; --r-xl:28px;
+
+  --container:1240px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--f-body);
+  background:var(--cream);
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+.display{
+  font-family:var(--f-display);
+  font-weight:300;
+  letter-spacing:-0.025em;
+  line-height:0.98;
+  font-variation-settings:"opsz" 144,"SOFT" 100;
+}
+.eyebrow{
+  font-family:var(--f-mono);
+  font-size:11px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--clay);
+  font-weight:500;
+}
+.h-serif{
+  font-family:var(--f-display);
+  font-weight:350;
+  letter-spacing:-0.015em;
+  line-height:1.05;
+  font-variation-settings:"opsz" 96,"SOFT" 80;
+}
+.body-lede{
+  font-family:var(--f-display);
+  font-weight:300;
+  font-style:italic;
+  font-size:clamp(20px,2.2vw,28px);
+  line-height:1.4;
+  color:var(--ink-soft);
+  text-wrap:balance;
+}
+
+.wrap{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 32px;
+}
+@media (max-width:680px){ .wrap{padding:0 20px} }
+
+section{padding:120px 0;position:relative}
+section + section{border-top:1px solid var(--line-soft)}
+@media (max-width:680px){ section{padding:80px 0} }
+
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 22px;
+  border-radius:999px;
+  font-weight:500;
+  font-size:15px;
+  letter-spacing:-0.005em;
+  transition:transform .25s ease, background .25s ease, color .25s ease;
+}
+.btn-primary{background:var(--ink);color:var(--cream)}
+.btn-primary:hover{background:var(--terracotta-deep);transform:translateY(-1px)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.btn-wa{background:var(--terracotta);color:var(--cream)}
+.btn-wa:hover{background:var(--terracotta-deep);transform:translateY(-1px)}
+
+.placeholder{
+  position:relative;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      var(--sand) 0 14px,
+      var(--sand-2) 14px 28px
+    );
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  display:flex;align-items:flex-end;justify-content:flex-start;
+  isolation:isolate;
+}
+.placeholder::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 80% at 30% 30%, rgba(255,250,242,.45), transparent 60%);
+  z-index:0;
+}
+.placeholder .ph-cap{
+  position:relative;z-index:1;
+  font-family:var(--f-mono);
+  font-size:11px;letter-spacing:0.04em;
+  color:var(--ink-soft);
+  background:var(--cream);
+  padding:6px 10px;border-radius:6px;
+  margin:14px;
+  box-shadow:0 1px 0 rgba(43,38,32,.04);
+}
+.placeholder.dark{
+  background:
+    repeating-linear-gradient(135deg, #2B2620 0 14px, #3A332C 14px 28px);
+}
+.placeholder.dark .ph-cap{background:var(--ink);color:var(--sand)}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.6,.2,1), transform .9s cubic-bezier(.2,.6,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+.rule{
+  display:flex;align-items:center;gap:18px;
+  font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink-mute);
+}
+.rule::before,.rule::after{
+  content:"";flex:1;height:1px;background:var(--line);
+}
+
+.marquee{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:var(--sand);
+  overflow:hidden;
+  padding:22px 0;
+}
+.marquee-track{
+  display:flex;gap:64px;
+  white-space:nowrap;
+  animation:slide 38s linear infinite;
+  font-family:var(--f-display);
+  font-style:italic;
+  font-size:28px;
+  color:var(--ink-soft);
+  font-weight:300;
+}
+.marquee-track span{display:inline-flex;align-items:center;gap:64px}
+.marquee-track .dot{width:6px;height:6px;border-radius:50%;background:var(--terracotta);display:inline-block}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+.nav-link{position:relative;transition:color .2s ease}
+.nav-link:hover{color:var(--ink)}
+.nav-link::after{
+  content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;
+  background:var(--terracotta);transform:scaleX(0);transform-origin:left;
+  transition:transform .3s ease;
+}
+.nav-link:hover::after{transform:scaleX(1)}
+
+.ig-tile:hover{transform:translateY(-3px)}
+.ig-tile:hover .ig-overlay{opacity:1}
+
+.start-pill{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:8px 14px;border-radius:999px;
+  background:rgba(201,123,90,0.12);
+  color:var(--terracotta-deep);
+  font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.start-pill .pulse{
+  width:8px;height:8px;border-radius:50%;background:var(--terracotta);
+  box-shadow:0 0 0 0 rgba(201,123,90,.5);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(201,123,90,.45)}
+  70%{box-shadow:0 0 0 10px rgba(201,123,90,0)}
+  100%{box-shadow:0 0 0 0 rgba(201,123,90,0)}
+}
+
+.list-checks{list-style:none;display:flex;flex-direction:column;gap:14px}
+.list-checks li{
+  position:relative;padding-left:28px;
+  font-size:16px;color:var(--ink-soft);line-height:1.5;
+}
+.list-checks li::before{
+  content:"";position:absolute;left:0;top:10px;
+  width:14px;height:1px;background:var(--terracotta);
+}
+
+@media (max-width: 980px){
+  .hero-grid, .about-grid, .ways-grid, .who-grid,
+  .offer-grid, .ig-head, .faq-grid, .foot-grid,
+  .ig-grid, .hero-bottom {
+    grid-template-columns: 1fr !important;
+  }
+  .ig-grid{grid-template-columns: repeat(3, 1fr) !important}
+  .nav-links{display:none !important}
+}
+@media (max-width: 680px){
+  .ig-grid{grid-template-columns: repeat(2, 1fr) !important}
+  .foot-grid{grid-template-columns: repeat(2, 1fr) !important}
+}
+
+::selection{background:var(--terracotta);color:var(--cream)}
+</style>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+/* ============================================================
+   Atoms
+============================================================ */
+function Placeholder({ caption, aspect = "4/5", dark = false, className = "", style = {} }) {
+  return (
+    <div className={`placeholder ${dark ? "dark" : ""} ${className}`}
+         style={{ aspectRatio: aspect, ...style }}>
+      <span className="ph-cap">{caption}</span>
+    </div>
+  );
+}
+
+function Eyebrow({ children, n }) {
+  return (
+    <div className="eyebrow" style={{ display: "flex", alignItems: "center", gap: 10 }}>
+      {n != null && <span style={{ opacity: 0.55 }}>{String(n).padStart(2, "0")}</span>}
+      <span style={{ width: 18, height: 1, background: "currentColor", opacity: 0.35 }} />
+      {children}
+    </div>
+  );
+}
+
+function useReveal() {
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => {
+      const els = document.querySelectorAll(".reveal");
+      const vh = window.innerHeight;
+      els.forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.top < vh * 0.92) el.classList.add("in");
+      });
+      const io = new IntersectionObserver(
+        (entries) => entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+        }),
+        { threshold: 0.08, rootMargin: "0px 0px -5% 0px" }
+      );
+      els.forEach((el) => { if (!el.classList.contains("in")) io.observe(el); });
+      window.__revealIO = io;
+    });
+    return () => {
+      cancelAnimationFrame(raf);
+      if (window.__revealIO) window.__revealIO.disconnect();
+    };
+  }, []);
+}
+
+const WA_NUMBER = "919999999999"; // TODO: replace with Komal's real WhatsApp number
+const IG_URL = "https://www.instagram.com/releaseandrealize/";
+function waLink(message) {
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+const WhatsAppIcon = ({ size = 16 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+);
+
+/* ============================================================
+   Nav
+============================================================ */
+function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const links = [
+    ["The practice", "#practice"],
+    ["For you", "#who"],
+    ["Offerings", "#offerings"],
+    ["FAQ", "#faq"],
+  ];
+
+  return (
+    <header style={{
+      position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
+      backdropFilter: scrolled ? "blur(14px) saturate(120%)" : "none",
+      background: scrolled ? "rgba(245,239,230,0.78)" : "transparent",
+      borderBottom: scrolled ? "1px solid var(--line-soft)" : "1px solid transparent",
+      transition: "all .35s ease",
+    }}>
+      <div className="wrap" style={{
+        display: "flex", alignItems: "center", justifyContent: "space-between",
+        padding: "18px 32px",
+      }}>
+        <a href="#top" style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <span style={{
+            width: 28, height: 28, borderRadius: "50%",
+            background: "var(--terracotta)",
+            display: "inline-flex", alignItems: "center", justifyContent: "center",
+            color: "var(--cream)", fontFamily: "var(--f-display)", fontSize: 16,
+            fontStyle: "italic", fontWeight: 400,
+          }}>k</span>
+          <span style={{ fontFamily: "var(--f-display)", fontSize: 19, letterSpacing: "-0.01em" }}>
+            Yoga with Komal
+          </span>
+        </a>
+
+        <nav style={{ display: "flex", gap: 28, alignItems: "center" }} className="nav-links">
+          {links.map(([label, href]) => (
+            <a key={href} href={href} className="nav-link"
+               style={{ fontSize: 14, color: "var(--ink-soft)" }}>
+              {label}
+            </a>
+          ))}
+        </nav>
+
+        <a href={waLink("Hi Komal — I'd like to join your practice.")} target="_blank" rel="noopener"
+           className="btn btn-primary" style={{ padding: "10px 18px", fontSize: 14 }}>
+          Join via WhatsApp
+          <span style={{ fontSize: 16, lineHeight: 1 }}>→</span>
+        </a>
+      </div>
+    </header>
+  );
+}
+
+/* ============================================================
+   Hero
+============================================================ */
+function Hero() {
+  return (
+    <section id="top" style={{ paddingTop: 140, paddingBottom: 40 }}>
+      <div className="wrap">
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "1.15fr 0.85fr",
+          gap: 56,
+          alignItems: "end",
+        }} className="hero-grid">
+          <div className="reveal">
+            <div className="start-pill" style={{ marginBottom: 28 }}>
+              <span className="pulse" />
+              Classes begin May 5
+            </div>
+            <h1 className="display" style={{ fontSize: "clamp(56px, 8.4vw, 132px)" }}>
+              Move with awareness.<br />
+              <span style={{ fontStyle: "italic", color: "var(--terracotta)", fontWeight: 300 }}>
+                Come back home
+              </span><br />
+              to yourself.
+            </h1>
+
+            <div style={{
+              marginTop: 36,
+              display: "grid",
+              gridTemplateColumns: "1fr auto",
+              gap: 40,
+              alignItems: "end",
+            }} className="hero-bottom">
+              <p className="body-lede" style={{ maxWidth: 520 }}>
+                Hi, I'm Komal. I guide embodied Hatha-Vinyasa practices —
+                a somatic approach to movement, breath, and quiet attention.
+              </p>
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <a href={waLink("Hi Komal — I'd like to join your practice.")} target="_blank"
+                   rel="noopener" className="btn btn-wa">
+                  <WhatsAppIcon />
+                  Join via WhatsApp
+                </a>
+                <a href={IG_URL} target="_blank" rel="noopener" className="btn btn-ghost">
+                  Explore on Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="reveal" style={{ position: "relative" }}>
+            <Placeholder caption="[komal · embodied movement · soft light]" aspect="3/4" />
+            <div style={{
+              position: "absolute", bottom: -30, left: -30,
+              background: "var(--cream)",
+              padding: "16px 18px",
+              borderRadius: 14,
+              border: "1px solid var(--line)",
+              boxShadow: "0 14px 40px rgba(43,38,32,0.06)",
+              maxWidth: 240,
+            }}>
+              <div className="eyebrow">A space to</div>
+              <div style={{ fontFamily: "var(--f-display)", fontSize: 22, marginTop: 6, lineHeight: 1.2 }}>
+                Move with awareness
+              </div>
+              <div style={{ fontSize: 13, color: "var(--ink-mute)", marginTop: 4 }}>
+                Group · 1:1 · Themed sessions
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="reveal" style={{
+          marginTop: 100,
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: 32,
+          paddingTop: 32,
+          borderTop: "1px solid var(--line)",
+        }}>
+          {[
+            ["Make movement a part of your regime.", "Show up — gently, sustainably."],
+            ["Build a supportive relationship with your body & mind.", "Listen rather than override."],
+            ["Cultivate presence & awareness in your everyday life.", "Beyond the mat, into your day."],
+          ].map(([h, s]) => (
+            <div key={h}>
+              <div style={{
+                fontFamily: "var(--f-display)", fontSize: 22,
+                lineHeight: 1.25, letterSpacing: "-0.01em", textWrap: "balance",
+              }}>
+                {h}
+              </div>
+              <div style={{ fontSize: 13, color: "var(--ink-mute)", marginTop: 8 }}>{s}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
+   Marquee
+============================================================ */
+function Marquee(){
+  const phrases = ["Move with awareness", "Soften", "Breathe", "Listen", "Return", "Begin"];
+  const items = [...phrases, ...phrases, ...phrases];
+  return (
+    <div className="marquee">
+      <div className="marquee-track">
+        {items.map((p, i) => (
+          <span key={i}>
+            {p}
+            <span className="dot" />
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ============================================================
+   What this is — Yoga beyond the mat
+============================================================ */
+function Practice() {
+  return (
+    <section id="practice">
+      <div className="wrap">
+        <div className="rule reveal" style={{ marginBottom: 64 }}>
+          <span>02 — What this is</span>
+        </div>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "0.85fr 1.15fr",
+          gap: 80,
+          alignItems: "start",
+        }} className="about-grid">
+          <div className="reveal" style={{ position: "sticky", top: 110 }}>
+            <Placeholder caption="[movement · floor · breath]" aspect="4/5" />
+            <Placeholder caption="[hands · listening · stillness]" aspect="1/1"
+                         style={{ marginTop: 16, marginLeft: 60 }} />
+          </div>
+
+          <div className="reveal">
+            <Eyebrow n={2}>Yoga — beyond the mat</Eyebrow>
+            <h2 className="h-serif" style={{ fontSize: "clamp(40px, 5.6vw, 72px)", marginTop: 24 }}>
+              The focus is not on how it looks —
+              <span style={{ fontStyle: "italic", color: "var(--terracotta)" }}> but on how you feel.</span>
+            </h2>
+
+            <div style={{
+              marginTop: 40,
+              display: "flex", flexDirection: "column", gap: 22,
+              fontSize: 17, color: "var(--ink-soft)", maxWidth: 580,
+            }}>
+              <p>
+                This is a movement practice where you are guided to feel, sense, and
+                listen to your body from within — to allow your body to lead, instead of
+                controlling it.
+              </p>
+              <p>
+                Not chasing perfect postures. Not forcing your body into shapes.
+                Noticing what the mind offers — without clinging or judgment.
+              </p>
+            </div>
+
+            <ul className="list-checks" style={{ marginTop: 36, maxWidth: 560 }}>
+              <li>Move with gentle focus.</li>
+              <li>Feel, sense, and listen to your body from within.</li>
+              <li>Allow your body to lead, instead of controlling it.</li>
+              <li>Notice what the mind offers — without clinging or judgment.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
+   Two ways to experience yourself
+============================================================ */
+function Ways() {
+  const ways = [
+    {
+      n: "01",
+      title: "The Observer",
+      lede: "You notice how you're showing up — your patterns, your roles, your habitual ways of being. And gently, you step back. You witness — without judgement.",
+      body: "The ability to watch yourself, while still being in the experience, creates space.",
+      list: [
+        "See clearly.",
+        "Release what no longer serves.",
+        "Embrace authenticity & alignment.",
+      ],
+    },
+    {
+      n: "02",
+      title: "The Immersion",
+      lede: "At times you become fully absorbed in what you're doing. No overthinking. No separation. Just presence.",
+      body: "Every moment of such movement:",
+      list: [
+        "Restores your energy.",
+        "Nourishes your creativity.",
+        "Brings you fully into the experience.",
+      ],
+    },
+  ];
+
+  return (
+    <section style={{ background: "var(--sand)", borderTop: "1px solid var(--line)" }}>
+      <div className="wrap">
+        <div className="rule reveal" style={{ marginBottom: 56 }}>
+          <span>03 — Two ways in</span>
+        </div>
+
+        <h2 className="h-serif reveal" style={{
+          fontSize: "clamp(40px, 5.6vw, 72px)",
+          maxWidth: 920, marginBottom: 64,
+        }}>
+          Two ways you begin to <span style={{ fontStyle: "italic", color: "var(--terracotta)" }}>experience yourself</span> in this practice.
+        </h2>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gap: 28,
+        }} className="ways-grid">
+          {ways.map((w) => (
+            <article key={w.n} className="reveal" style={{
+              background: "var(--cream)",
+              borderRadius: 24,
+              padding: 36,
+              border: "1px solid var(--line)",
+              display: "flex", flexDirection: "column", gap: 22,
+            }}>
+              <div style={{
+                fontFamily: "var(--f-mono)", fontSize: 12,
+                color: "var(--terracotta-deep)", letterSpacing: ".18em",
+              }}>{w.n}</div>
+              <h3 style={{
+                fontFamily: "var(--f-display)",
+                fontSize: 44, fontWeight: 350,
+                letterSpacing: "-0.02em", lineHeight: 1.05,
+              }}>
+                {w.title}
+              </h3>
+              <p className="body-lede" style={{ fontSize: 22, fontStyle: "italic" }}>
+                {w.lede}
+              </p>
+              <p style={{ fontSize: 16, color: "var(--ink-soft)" }}>
+                {w.body}
+              </p>
+              <ul className="list-checks">
+                {w.list.map((l) => <li key={l}>{l}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div className="reveal" style={{
+          marginTop: 80,
+          padding: "40px 0",
+          borderTop: "1px solid var(--line)",
+          maxWidth: 880,
+        }}>
+          <p className="body-lede" style={{ fontSize: 24 }}>
+            As awareness deepens, you begin to notice your patterns of moving, holding &amp; responding —
+            <span style={{ color: "var(--ink)", fontStyle: "normal" }}> not just on the mat, but in your everyday life.</span>
+          </p>
+          <ul className="list-checks" style={{ marginTop: 28, maxWidth: 560 }}>
+            <li>Move with greater intention.</li>
+            <li>Make conscious, aligned choices.</li>
+            <li>Respond rather than react.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
+   Who this is for
+============================================================ */
+function Who() {
+  const cols = [
+    {
+      h: "You may feel like",
+      list: [
+        "Your mind stays active, even when your body is tired.",
+        "You're doing a lot, but not really in it.",
+        "Something feels stuck, even when life is moving.",
+      ],
+    },
+    {
+      h: "You're looking for",
+      list: [
+        "More groundedness and clarity.",
+        "Space to slow down and reconnect.",
+        "Movement that feels sustainable & accessible.",
+      ],
+    },
+    {
+      h: "You're ready to",
+      list: [
+        "Move with awareness.",
+        "Show up for yourself, gently.",
+        "Build a supportive relationship with your body & mind.",
+      ],
+    },
+  ];
+
+  return (
+    <section id="who" style={{ background: "var(--ink)", color: "var(--cream)", padding: "140px 0" }}>
+      <div className="wrap">
+        <div className="rule reveal" style={{ marginBottom: 56, color: "var(--sand)" }}>
+          <span style={{ color: "var(--sand)" }}>04 — Who this is for</span>
+        </div>
+
+        <h2 className="h-serif reveal" style={{
+          fontSize: "clamp(40px, 5.6vw, 72px)", maxWidth: 920, marginBottom: 80,
+          color: "var(--cream)",
+        }}>
+          For those ready to <span style={{ fontStyle: "italic", color: "var(--terracotta)" }}>live more consciously.</span>
+        </h2>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: 32,
+        }} className="who-grid">
+          {cols.map((c, i) => (
+            <div key={c.h} className="reveal" style={{
+              padding: 32,
+              borderRadius: 20,
+              border: "1px solid rgba(245,239,230,0.12)",
+              background: "rgba(245,239,230,0.02)",
+            }}>
+              <div className="eyebrow" style={{ color: "var(--terracotta)" }}>
+                {String(i+1).padStart(2,"0")} — {c.h}
+              </div>
+              <ul className="list-checks" style={{ marginTop: 22 }}>
+                {c.list.map((l) => (
+                  <li key={l} style={{ color: "rgba(245,239,230,0.78)" }}>{l}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
+   Offerings — ways to practice together
+============================================================ */
+const OFFERINGS = [
+  {
+    name: "Group Classes",
+    sub: "For structure, consistency & community.",
+    bullets: [
+      "90 min Hatha-Vinyasa-based flows",
+      "Breath awareness & chanting",
+      "Weekly integration — alignment & reflection",
+    ],
+    pricing: [
+      { mode: "Online",  price: "₹5,000", per: "/ month" },
+      { mode: "Offline", price: "₹6,000", per: "/ month" },
+    ],
+    note: "Live + recorded for replay.",
+    img: "[group · circle · flow]",
+    waMsg: "Hi Komal — I'd like to join group classes.",
+  },
+  {
+    name: "1:1 Sessions",
+    sub: "For those who want to move at their own pace.",
+    bullets: [
+      "Movement to release tension",
+      "Breath awareness & guided pranayama",
+      "Chanting to create stillness",
+      "Reflection on the Yoga Sutras (Samadhi Pada)",
+      "Journaling prompts for personal reflection",
+    ],
+    pricing: [
+      { mode: "Online & Offline", price: "₹1,000", per: "/ session" },
+    ],
+    note: "Sessions are tailored to your current needs.",
+    img: "[1:1 · close · attention]",
+    waMsg: "Hi Komal — I'd like to book a 1:1 session.",
+  },
+  {
+    name: "Themed Sessions",
+    sub: "Deeper, guided experiences. Periodic.",
+    bullets: [
+      "Yoga Nidra",
+      "Devotional Singing & Chanting",
+      "Full Moon & New Moon Gatherings",
+      "Movement-based Pranayama",
+      "Group Explorations — balance, trust, coordination",
+    ],
+    pricing: [
+      { mode: "Periodic", price: "Announced", per: "separately" },
+    ],
+    note: "Watch Instagram or WhatsApp for the next dates.",
+    img: "[circle · candle · gathering]",
+    waMsg: "Hi Komal — keep me posted on themed sessions.",
+  },
+];
+
+function Offerings() {
+  return (
+    <section id="offerings">
+      <div className="wrap">
+        <div className="rule reveal" style={{ marginBottom: 56 }}>
+          <span>05 — Offerings</span>
+        </div>
+
+        <div className="reveal" style={{
+          display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 60,
+          alignItems: "end", marginBottom: 80,
+        }} className="ways-grid">
+          <h2 className="h-serif" style={{ fontSize: "clamp(40px, 5.6vw, 72px)" }}>
+            Ways to <span style={{ fontStyle: "italic", color: "var(--terracotta)" }}>practice together.</span>
+          </h2>
+          <p className="body-lede" style={{ fontSize: 19 }}>
+            Three doors in — group classes, 1:1 sessions, and themed gatherings.
+            All three meet you where today actually is.
+          </p>
+        </div>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: 24,
+        }} className="offer-grid">
+          {OFFERINGS.map((o, i) => (
+            <OfferCard key={o.name} o={o} i={i} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function OfferCard({ o, i }) {
+  const [hover, setHover] = useState(false);
+  return (
+    <article className="reveal"
+      onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
+      style={{
+        background: "var(--cream)",
+        borderRadius: 24,
+        padding: 28,
+        border: "1px solid var(--line)",
+        display: "flex", flexDirection: "column", gap: 20,
+        transition: "transform .35s ease, box-shadow .35s ease",
+        transform: hover ? "translateY(-3px)" : "none",
+        boxShadow: hover ? "0 22px 50px rgba(43,38,32,0.08)" : "0 1px 0 rgba(43,38,32,0.02)",
+      }}
+    >
+      <Placeholder caption={o.img} aspect="5/3" />
+
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+        <span className="eyebrow">{String(i + 1).padStart(2, "0")} — Offering</span>
+      </div>
+
+      <h3 style={{
+        fontFamily: "var(--f-display)",
+        fontSize: 34, fontWeight: 350,
+        letterSpacing: "-0.02em", lineHeight: 1.05,
+      }}>
+        {o.name}
+      </h3>
+
+      <p style={{ fontSize: 15, color: "var(--ink-soft)", fontStyle: "italic" }}>{o.sub}</p>
+
+      <ul className="list-checks" style={{ gap: 10 }}>
+        {o.bullets.map((b) => <li key={b} style={{ fontSize: 14 }}>{b}</li>)}
+      </ul>
+
+      <div style={{
+        marginTop: "auto",
+        paddingTop: 18, borderTop: "1px solid var(--line)",
+        display: "flex", flexDirection: "column", gap: 10,
+      }}>
+        {o.pricing.map((p) => (
+          <div key={p.mode} style={{
+            display: "flex", justifyContent: "space-between", alignItems: "baseline",
+          }}>
+            <span style={{ fontSize: 13, color: "var(--ink-mute)" }}>{p.mode}</span>
+            <span>
+              <span style={{ fontFamily: "var(--f-display)", fontSize: 22, letterSpacing: "-0.01em" }}>
+                {p.price}
+              </span>
+              <span style={{ fontSize: 12, color: "var(--ink-mute)", marginLeft: 6 }}>{p.per}</span>
+            </span>
+          </div>
+        ))}
+        <div style={{ fontSize: 12, color: "var(--ink-mute)", fontStyle: "italic" }}>{o.note}</div>
+      </div>
+
+      <a href={waLink(o.waMsg)} target="_blank" rel="noopener"
+         className="btn btn-wa" style={{ justifyContent: "center" }}>
+        <WhatsAppIcon />
+        Join via WhatsApp
+        <span style={{
+          transition: "transform .25s ease",
+          transform: hover ? "translateX(4px)" : "none",
+        }}>→</span>
+      </a>
+    </article>
+  );
+}
+
+/* ============================================================
+   Quote
+============================================================ */
+function Quote() {
+  return (
+    <section style={{ background: "var(--sand)", borderTop: "1px solid var(--line)" }}>
+      <div className="wrap">
+        <div className="rule reveal" style={{ marginBottom: 48 }}>
+          <span>06 — A note</span>
+        </div>
+        <h2 className="h-serif reveal" style={{
+          fontSize: "clamp(40px, 6vw, 84px)", maxWidth: 980,
+        }}>
+          Moving with awareness
+          <span style={{ fontStyle: "italic", color: "var(--terracotta)" }}> changes how you experience </span>
+          life.
+        </h2>
+        <div className="reveal" style={{
+          marginTop: 40, display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)", gap: 28,
+        }} className="who-grid">
+          {[
+            "Make movement a part of your regime.",
+            "Build a supportive relationship with your body & mind.",
+            "Cultivate presence & awareness in your everyday life.",
+          ].map((t, i) => (
+            <div key={i} style={{
+              padding: 24, borderRadius: 20,
+              border: "1px solid var(--line)", background: "var(--cream)",
+            }}>
+              <div className="eyebrow">{String(i+1).padStart(2,"0")}</div>
+              <p style={{
+                marginTop: 12, fontFamily: "var(--f-display)",
+                fontSize: 22, lineHeight: 1.25, letterSpacing: "-0.01em", textWrap: "balance",
+              }}>
+                {t}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
+   Instagram
+============================================================ */
+const IG_POSTS = [
+  { c: "[ig · embodied flow · soft light]" },
+  { c: "[ig · breath · close]" },
+  { c: "[ig · pranayama · seated]" },
+  { c: "[ig · group circle · gathering]" },
+  { c: "[ig · forward fold · floor]" },
+  { c: "[ig · candle · stillness]" },
+];
+
+function Instagram() {
+  return (
+    <section id="ig">
+      <div className="wrap">
+        <div className="rule reveal" style={{ marginBottom: 48 }}>
+          <span>07 — Field notes · @releaseandrealize</span>
+        </div>
+
+        <div className="reveal" style={{
+          display: "grid", gridTemplateColumns: "1fr auto",
+          gap: 40, alignItems: "end", marginBottom: 48,
+        }} className="ig-head">
+          <h2 className="h-serif" style={{ fontSize: "clamp(36px, 5vw, 64px)" }}>
+            Notes from practice,
+            <span style={{ fontStyle: "italic", color: "var(--terracotta)" }}> the morning floor, the breath.</span>
+          </h2>
+          <a href={IG_URL} target="_blank" rel="noopener" className="btn btn-ghost">
+            Explore on Instagram →
+          </a>
+        </div>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(6, 1fr)",
+          gap: 12,
+        }} className="ig-grid">
+          {IG_POSTS.map((p, i) => (
+            <a key={i} href={IG_URL} target="_blank" rel="noopener"
+               className="reveal ig-tile" style={{
+                 position: "relative", display: "block", borderRadius: 12, overflow: "hidden",
+                 transition: "transform .35s ease",
+               }}>
+              <Placeholder caption={p.c} aspect="1/1" style={{ borderRadius: 12 }} />
+              <div className="ig-overlay" style={{
+                position: "absolute", inset: 0,
+                background: "linear-gradient(180deg, transparent 50%, rgba(43,38,32,.6) 100%)",
+                opacity: 0, transition: "opacity .3s ease",
+              }} />
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
+   FAQ
+============================================================ */
+const FAQS = [
+  {
+    q: "I'm new to yoga. Is this for me?",
+    a: "Yes. The focus is on how you feel, not how it looks. You'll be guided to move with gentle awareness — at your own pace, no prior experience needed. Beginners are warmly welcome."
+  },
+  {
+    q: "How is this different from a typical yoga class?",
+    a: "This is a somatic, embodied practice. Rather than chasing perfect postures, you're guided to feel, sense, and listen to your body from within — letting the body lead instead of controlling it. The mat becomes a doorway to the rest of your day."
+  },
+  {
+    q: "How does booking work?",
+    a: "Tap any \"Join via WhatsApp\" button. You'll land in a chat with me, pre-filled with what you're interested in. I'll reply and we'll find the right starting point together."
+  },
+  {
+    q: "Can I do classes online?",
+    a: "Yes. Group classes run online and offline. Online sessions are live + recorded for replay, so you can practice with the group or catch up later in the week. 1:1 sessions are available online and offline."
+  },
+  {
+    q: "What do I need at home for online classes?",
+    a: "A mat, a bit of floor space, and a quiet corner. Some household props help — a cushion, a thick book or two, a belt — but I'll always offer alternatives if you don't have something."
+  },
+  {
+    q: "What does a 1:1 session include?",
+    a: "Sessions are tailored to your current needs. Depending on what's useful for you, we might work with movement to release tension, breath awareness and guided pranayama, chanting to create stillness, reflection on the Yoga Sutras (Samadhi Pada), or journaling prompts for personal reflection."
+  },
+  {
+    q: "What are themed sessions?",
+    a: "Periodic, deeper guided experiences — Yoga Nidra, devotional singing & chanting, full moon and new moon gatherings, movement-based pranayama, and group explorations around balance, trust, and coordination. Dates are announced separately."
+  },
+  {
+    q: "When do classes begin?",
+    a: "Classes begin May 5. Message on WhatsApp to reserve your spot or to be added to the next intake."
+  },
+];
+
+function FAQ() {
+  const [open, setOpen] = useState(0);
+  return (
+    <section id="faq" style={{ background: "var(--cream)" }}>
+      <div className="wrap">
+        <div className="rule reveal" style={{ marginBottom: 56 }}>
+          <span>08 — Questions</span>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "0.8fr 1.2fr", gap: 80 }} className="faq-grid">
+          <div className="reveal" style={{ position: "sticky", top: 110, alignSelf: "start" }}>
+            <h2 className="h-serif" style={{ fontSize: "clamp(40px, 5vw, 64px)" }}>
+              Things people ask <span style={{ fontStyle: "italic", color: "var(--terracotta)" }}>before they begin.</span>
+            </h2>
+            <p style={{ marginTop: 24, color: "var(--ink-soft)", maxWidth: 380 }}>
+              Don't see your question? Message me directly — I read every note.
+            </p>
+            <a href={waLink("Hi Komal — I have a question.")} target="_blank" rel="noopener"
+               className="btn btn-wa" style={{ marginTop: 24 }}>
+              <WhatsAppIcon />
+              Ask on WhatsApp →
+            </a>
+          </div>
+
+          <div className="reveal" style={{ borderTop: "1px solid var(--line)" }}>
+            {FAQS.map((f, i) => {
+              const isOpen = open === i;
+              return (
+                <div key={i} style={{ borderBottom: "1px solid var(--line)" }}>
+                  <button onClick={() => setOpen(isOpen ? -1 : i)}
+                    style={{
+                      width: "100%", textAlign: "left",
+                      padding: "26px 0",
+                      display: "flex", justifyContent: "space-between", alignItems: "center",
+                      gap: 24, fontFamily: "var(--f-display)", fontSize: 22,
+                      letterSpacing: "-0.01em",
+                      color: "var(--ink)",
+                    }}>
+                    <span style={{ flex: 1, textWrap: "balance" }}>{f.q}</span>
+                    <span style={{
+                      width: 32, height: 32, borderRadius: "50%",
+                      border: "1px solid var(--line)",
+                      display: "inline-flex", alignItems: "center", justifyContent: "center",
+                      fontSize: 18, fontWeight: 300,
+                      transition: "transform .3s ease, background .3s ease, color .3s ease",
+                      transform: isOpen ? "rotate(45deg)" : "none",
+                      background: isOpen ? "var(--ink)" : "transparent",
+                      color: isOpen ? "var(--cream)" : "var(--ink)",
+                      flexShrink: 0,
+                    }}>+</span>
+                  </button>
+                  <div style={{
+                    display: "grid",
+                    gridTemplateRows: isOpen ? "1fr" : "0fr",
+                    transition: "grid-template-rows .35s ease",
+                  }}>
+                    <div style={{ overflow: "hidden" }}>
+                      <p style={{
+                        paddingBottom: 28, color: "var(--ink-soft)",
+                        fontSize: 16, maxWidth: 620,
+                      }}>{f.a}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
+   CTA
+============================================================ */
+function CTA() {
+  return (
+    <section style={{ background: "var(--terracotta)", color: "var(--cream)", padding: "140px 0" }}>
+      <div className="wrap" style={{ textAlign: "center" }}>
+        <div className="reveal eyebrow" style={{ color: "rgba(245,239,230,0.7)" }}>The practice begins here</div>
+        <h2 className="display reveal" style={{
+          fontSize: "clamp(56px, 9vw, 140px)",
+          marginTop: 24, color: "var(--cream)",
+        }}>
+          You don't have to<br />
+          figure it all out.<br />
+          <span style={{ fontStyle: "italic" }}>You just have to begin.</span>
+        </h2>
+        <p className="body-lede reveal" style={{
+          color: "rgba(245,239,230,0.85)", margin: "32px auto 0", maxWidth: 560,
+        }}>
+          Classes begin May 5. Message me to reserve your spot or to ask anything.
+        </p>
+        <div className="reveal" style={{ marginTop: 40, display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
+          <a href={waLink("Hi Komal — I'd like to begin.")} target="_blank" rel="noopener"
+             className="btn" style={{
+               background: "var(--cream)", color: "var(--ink)",
+               padding: "16px 26px", fontSize: 16,
+             }}>
+            <WhatsAppIcon />
+            Join via WhatsApp
+          </a>
+          <a href={IG_URL} target="_blank" rel="noopener"
+             className="btn" style={{
+               background: "transparent", color: "var(--cream)",
+               border: "1px solid rgba(245,239,230,0.45)",
+               padding: "16px 26px", fontSize: 16,
+             }}>
+            Explore on Instagram →
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ============================================================
+   Footer
+============================================================ */
+function Footer() {
+  return (
+    <footer style={{ background: "var(--ink)", color: "var(--sand)", padding: "80px 0 32px" }}>
+      <div className="wrap">
+        <div style={{
+          display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr 1fr",
+          gap: 40, alignItems: "start",
+        }} className="foot-grid">
+          <div>
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <span style={{
+                width: 28, height: 28, borderRadius: "50%",
+                background: "var(--terracotta)",
+                display: "inline-flex", alignItems: "center", justifyContent: "center",
+                color: "var(--cream)", fontFamily: "var(--f-display)", fontStyle: "italic",
+              }}>k</span>
+              <span style={{ fontFamily: "var(--f-display)", fontSize: 22 }}>Yoga with Komal</span>
+            </div>
+            <p style={{ marginTop: 18, fontSize: 14, color: "rgba(245,239,230,0.65)", maxWidth: 320 }}>
+              A space to move with awareness and come back home to yourself.
+              Embodied Hatha-Vinyasa, online & in person.
+            </p>
+          </div>
+          <div>
+            <div className="eyebrow" style={{ color: "var(--terracotta)" }}>Practice</div>
+            <ul style={{ listStyle: "none", marginTop: 16, display: "flex", flexDirection: "column", gap: 10, fontSize: 14 }}>
+              <li><a href="#practice">What this is</a></li>
+              <li><a href="#who">Who this is for</a></li>
+              <li><a href="#offerings">Offerings</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <div className="eyebrow" style={{ color: "var(--terracotta)" }}>Find me</div>
+            <ul style={{ listStyle: "none", marginTop: 16, display: "flex", flexDirection: "column", gap: 10, fontSize: 14 }}>
+              <li><a href={IG_URL} target="_blank" rel="noopener">Instagram · @releaseandrealize</a></li>
+              <li><a href={waLink("Hi Komal!")} target="_blank" rel="noopener">WhatsApp</a></li>
+            </ul>
+          </div>
+          <div>
+            <div className="eyebrow" style={{ color: "var(--terracotta)" }}>Begin</div>
+            <p style={{ marginTop: 16, fontSize: 14, color: "rgba(245,239,230,0.7)", lineHeight: 1.6 }}>
+              Classes begin May 5.<br />
+              Online & in person.<br />
+              Message to reserve your spot.
+            </p>
+          </div>
+        </div>
+
+        <div style={{
+          marginTop: 64, paddingTop: 24, borderTop: "1px solid rgba(245,239,230,0.1)",
+          display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 16,
+          fontSize: 12, color: "rgba(245,239,230,0.5)", fontFamily: "var(--f-mono)",
+        }}>
+          <span>© 2026 Yoga with Komal · All rights reserved</span>
+          <span>Made slowly.</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+/* ============================================================
+   App
+============================================================ */
+function App(){
+  useReveal();
+  return (
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <Marquee />
+        <Practice />
+        <Ways />
+        <Who />
+        <Offerings />
+        <Quote />
+        <Instagram />
+        <FAQ />
+        <CTA />
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("app")).render(<App />);
+</script>
+
+</body>
+</html>
