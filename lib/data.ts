@@ -12,7 +12,7 @@ export const SITE = {
   startsOn: "2026-05-05",
 };
 
-export const WA_NUMBER = "919999999999"; // TODO: replace with Komal's real WhatsApp number
+export const WA_NUMBER = "917602454213";
 export const IG_URL = "https://www.instagram.com/releaseandrealize/";
 export const IG_HANDLE = "releaseandrealize";
 
@@ -371,6 +371,23 @@ export const SEO_LANDINGS: SeoLanding[] = [
   },
 ];
 
+/* ----------------- Practice promises (reusable triplet) ----------------- */
+/* Pulled out of the hero for now. Drop into another section when wanted. */
+export const PRACTICE_PROMISES: { h: string; s: string }[] = [
+  {
+    h: "Make movement a part of your regime.",
+    s: "Show up, gently, sustainably.",
+  },
+  {
+    h: "Build a supportive relationship with your body & mind.",
+    s: "Listen rather than override.",
+  },
+  {
+    h: "Cultivate presence & awareness in your everyday life.",
+    s: "Beyond the mat, into your day.",
+  },
+];
+
 /* ----------------- Offerings (pricing tier) ----------------- */
 export const OFFERINGS = [
   {
@@ -388,7 +405,7 @@ export const OFFERINGS = [
     note: "Live + recorded for replay.",
     img: "[group · circle · flow]",
     src: "/img/announce-may5.jpg",
-    waMsg: "Hi Komal, I'd like to join group classes.",
+    waMsg: "Hi Komal, I'm interested in joining a group class.",
   },
   {
     name: "1:1 Sessions",
@@ -403,7 +420,7 @@ export const OFFERINGS = [
     pricing: [{ mode: "Online & Offline", price: "₹1,000", per: "/ session" }],
     note: "Sessions are tailored to your current needs.",
     img: "[1:1 · close · attention]",
-    waMsg: "Hi Komal, I'd like to book a 1:1 session.",
+    waMsg: "Hi Komal, I'm interested in booking a 1:1 session.",
   },
   {
     name: "Themed Sessions",
@@ -418,7 +435,7 @@ export const OFFERINGS = [
     pricing: [{ mode: "Periodic", price: "Announced", per: "separately" }],
     note: "Watch Instagram or WhatsApp for the next dates.",
     img: "[circle · candle · gathering]",
-    waMsg: "Hi Komal, keep me posted on themed sessions.",
+    waMsg: "Hi Komal, I'm interested in your themed sessions, please keep me posted on the next one.",
   },
 ] as const;
 
