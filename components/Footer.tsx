@@ -122,8 +122,6 @@ export default function Footer() {
                 lineHeight: 1.6,
               }}
             >
-              Classes begin May 5.
-              <br />
               Offline in Siliguri + online.
               <br />
               Message to reserve your spot.

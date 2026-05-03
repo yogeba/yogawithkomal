@@ -457,10 +457,6 @@ export const FAQS = [
     a: "Offline classes are in Siliguri. The exact venue and timing go out with your booking confirmation. Online sessions run worldwide.",
   },
   {
-    q: "When do classes begin?",
-    a: "Classes begin May 5, 2026. Message on WhatsApp to reserve your spot or to be added to the next intake.",
-  },
-  {
     q: "Is this a women-friendly space?",
     a: "Yes. Komal is a woman, and the practice is held with women in mind, though everyone is welcome. The space is small, intentional, and built around listening, no posing, no proving, no pressure. The practice meets you across the cycle, the year, and the seasons of life.",
   },

@@ -4,7 +4,7 @@ A Next.js 15 marketing site for a yoga teacher in Siliguri, India. Static-genera
 
 ## What this is
 
-Real teacher: Komal, instructor of embodied Hatha-Vinyasa, based in Siliguri. Instagram is `@releaseandrealize` (https://www.instagram.com/releaseandrealize/). She runs **group classes** (₹5,000 online / ₹6,000 offline per month), **1:1 sessions** (₹1,000/session), and **themed sessions** (Yoga Nidra, full/new moon gatherings, etc.). Classes begin **May 5, 2026**. The original Canva source: https://yoga-with-komal.my.canva.site/yoga-with-komal.
+Real teacher: Komal, instructor of embodied Hatha-Vinyasa, based in Siliguri. Instagram is `@releaseandrealize` (https://www.instagram.com/releaseandrealize/). She runs **group classes** (₹5,000 online / ₹6,000 offline per month), **1:1 sessions** (₹1,000/session), and **themed sessions** (Yoga Nidra, full/new moon gatherings, etc.). The original Canva source: https://yoga-with-komal.my.canva.site/yoga-with-komal.
 
 The previous static single-file `index.html` build is preserved at git tag `static-v1` for rollback.
 

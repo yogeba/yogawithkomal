@@ -16,7 +16,7 @@ const IG_POSTS = [
   },
   {
     src: "/img/announce-may5.jpg",
-    alt: "Group + 1:1 sessions, offline in Siliguri & online. Classes begin May 5.",
+    alt: "Group + 1:1 sessions, offline in Siliguri & online.",
   },
 ];
 

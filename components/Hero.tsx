@@ -21,16 +21,11 @@ export default function Hero() {
           }}
         >
           <div className="reveal">
-            <div className="start-pill" style={{ marginBottom: 28 }}>
-              <span className="pulse" />
-              Classes begin May 5
-            </div>
             <h1
               className="display"
               style={{ fontSize: "clamp(56px, 8.4vw, 132px)" }}
             >
-              Move with awareness.
-              <br />
+              Move with{" "}
               <span
                 style={{
                   fontStyle: "italic",
@@ -38,10 +33,8 @@ export default function Hero() {
                   fontWeight: 300,
                 }}
               >
-                Come back home
+                awareness.
               </span>
-              <br />
-              to yourself.
             </h1>
 
             <div
@@ -55,8 +48,8 @@ export default function Hero() {
               }}
             >
               <p className="body-lede" style={{ maxWidth: 520 }}>
-                Hi, I'm Komal. I guide embodied Hatha-Vinyasa practices, a
-                somatic approach to movement, breath, and quiet attention.
+                Embodied Hatha-Vinyasa, a practice that meets you where you
+                are.
               </p>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                 <a
