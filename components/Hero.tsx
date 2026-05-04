@@ -15,7 +15,7 @@ export default function Hero() {
             display: "grid",
             gridTemplateColumns: "1.15fr 0.85fr",
             gap: 56,
-            alignItems: "end",
+            alignItems: "start",
           }}
         >
           <div className="reveal">

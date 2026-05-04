@@ -1,5 +1,5 @@
 export default function Marquee() {
-  const phrases = ["Feel", "Sense", "Listen"];
+  const phrases = ["Feel", "Sense", "Listen", "Embody", "Soften", "Breathe"];
   const items = [...phrases, ...phrases, ...phrases];
   return (
     <div className="marquee">
