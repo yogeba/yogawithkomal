@@ -48,10 +48,12 @@ export default function SeoLanding({
       >
         <div className="wrap">
           <div className="reveal" style={{ maxWidth: 920 }}>
-            <div className="start-pill" style={{ marginBottom: 24 }}>
-              <span className="pulse" />
-              {kicker || "Classes begin May 5"}
-            </div>
+            {kicker && (
+              <div className="start-pill" style={{ marginBottom: 24 }}>
+                <span className="pulse" />
+                {kicker}
+              </div>
+            )}
             <h1
               className="display"
               style={{ fontSize: "clamp(48px, 7vw, 108px)", marginBottom: 32 }}

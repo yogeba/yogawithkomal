@@ -21,8 +21,6 @@ export default function Nav() {
 
   const links: [string, string][] = [
     ["The practice", "/#practice"],
-    ["For you", "/#who"],
-    ["Classes", "/#classes"],
     ["Offerings", "/#offerings"],
     ["FAQ", "/#faq"],
   ];

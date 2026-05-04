@@ -65,12 +65,6 @@ export default function Footer() {
                 <a href="/#practice">What this is</a>
               </li>
               <li>
-                <a href="/#who">Who this is for</a>
-              </li>
-              <li>
-                <a href="/#classes">Classes</a>
-              </li>
-              <li>
                 <a href="/#offerings">Offerings</a>
               </li>
               <li>
@@ -98,7 +92,13 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href={waLink("Hi Komal!")} target="_blank" rel="noopener">
+                <a
+                  href={waLink(
+                    "Hi Komal, I came across your site and would like to learn more about your practice."
+                  )}
+                  target="_blank"
+                  rel="noopener"
+                >
                   WhatsApp
                 </a>
               </li>
@@ -122,8 +122,6 @@ export default function Footer() {
                 lineHeight: 1.6,
               }}
             >
-              Classes begin May 5.
-              <br />
               Offline in Siliguri + online.
               <br />
               Message to reserve your spot.

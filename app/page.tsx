@@ -2,8 +2,6 @@ import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import Practice from "@/components/Practice";
 import Ways from "@/components/Ways";
-import Who from "@/components/Who";
-import Classes from "@/components/Classes";
 import Offerings from "@/components/Offerings";
 import Quote from "@/components/Quote";
 import Instagram from "@/components/Instagram";
@@ -20,8 +18,6 @@ export default function Home() {
       <Marquee />
       <Practice />
       <Ways />
-      <Who />
-      <Classes />
       <Offerings />
       <Quote />
       <Instagram />

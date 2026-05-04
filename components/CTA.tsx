@@ -36,7 +36,7 @@ export default function CTA() {
             maxWidth: 560,
           }}
         >
-          Classes begin May 5. Message me to reserve your spot or to ask anything.
+          Message me to reserve your spot or to ask anything.
         </p>
         <div
           className="reveal"

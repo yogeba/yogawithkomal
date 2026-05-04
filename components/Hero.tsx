@@ -1,5 +1,3 @@
-import Eyebrow from "./Eyebrow";
-import Placeholder from "./Placeholder";
 import WhatsAppIcon from "./WhatsAppIcon";
 import { IG_URL, waLink } from "@/lib/data";
 
@@ -21,16 +19,11 @@ export default function Hero() {
           }}
         >
           <div className="reveal">
-            <div className="start-pill" style={{ marginBottom: 28 }}>
-              <span className="pulse" />
-              Classes begin May 5
-            </div>
             <h1
               className="display"
               style={{ fontSize: "clamp(56px, 8.4vw, 132px)" }}
             >
-              Move with awareness.
-              <br />
+              Move with{" "}
               <span
                 style={{
                   fontStyle: "italic",
@@ -38,10 +31,8 @@ export default function Hero() {
                   fontWeight: 300,
                 }}
               >
-                Come back home
+                awareness.
               </span>
-              <br />
-              to yourself.
             </h1>
 
             <div
@@ -55,8 +46,8 @@ export default function Hero() {
               }}
             >
               <p className="body-lede" style={{ maxWidth: 520 }}>
-                Hi, I'm Komal. I guide embodied Hatha-Vinyasa practices, a
-                somatic approach to movement, breath, and quiet attention.
+                Embodied Hatha-Vinyasa, a practice that meets you where you
+                are.
               </p>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                 <a
@@ -76,84 +67,46 @@ export default function Hero() {
           </div>
 
           <div className="reveal" style={{ position: "relative" }}>
-            <Placeholder
-              src="/img/bring-awareness.jpg"
-              alt="Komal, riverside in Siliguri, holding a yoga mat"
-              aspect="3/4"
-            />
             <div
-              className="hero-card"
               style={{
-                position: "absolute",
-                bottom: -30,
-                left: -30,
-                background: "#F5EFE6",
-                padding: "16px 18px",
-                borderRadius: 14,
-                border: "1px solid rgba(43,38,32,0.12)",
-                boxShadow: "0 14px 40px rgba(43,38,32,0.06)",
-                maxWidth: 240,
+                aspectRatio: "3/4",
+                borderRadius: 20,
+                overflow: "hidden",
+                background: "#EDE3D2",
               }}
             >
-              <div className="eyebrow">A space to</div>
-              <div
-                className="display-name"
+              <video
+                src="/video/herovideo.mp4"
+                poster="/img/bring-awareness.jpg"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-label="Komal moving through a slow Hatha-Vinyasa sequence"
                 style={{
-                  fontFamily: '"Fraunces", serif',
-                  fontSize: 22,
-                  marginTop: 6,
-                  lineHeight: 1.2,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
                 }}
-              >
-                Move with awareness
-              </div>
-              <div
-                style={{
-                  fontSize: 13,
-                  color: "#7A6F62",
-                  marginTop: 4,
-                }}
-              >
-                Group · 1:1 · Themed sessions
-              </div>
+              />
+            </div>
+            <div
+              style={{
+                marginTop: 18,
+                fontSize: 13,
+                color: "#7A6F62",
+                fontFamily: '"JetBrains Mono", monospace',
+                letterSpacing: "0.04em",
+                textAlign: "center",
+              }}
+            >
+              Group · 1:1 · Themed sessions
             </div>
           </div>
         </div>
 
-        <div
-          className="reveal stats-grid"
-          style={{
-            marginTop: 100,
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: 32,
-            paddingTop: 32,
-            borderTop: "1px solid rgba(43,38,32,0.12)",
-          }}
-        >
-          {(
-            [
-              ["Make movement a part of your regime.", "Show up, gently, sustainably."],
-              ["Build a supportive relationship with your body & mind.", "Listen rather than override."],
-              ["Cultivate presence & awareness in your everyday life.", "Beyond the mat, into your day."],
-            ] as const
-          ).map(([h, s]) => (
-            <div key={h}>
-              <div
-                style={{
-                  fontFamily: '"Fraunces", serif',
-                  fontSize: 22,
-                  lineHeight: 1.25,
-                  letterSpacing: "-0.01em",
-                  textWrap: "balance",
-                }}
-              >
-                {h}
-              </div>
-              <div style={{ fontSize: 13, color: "#7A6F62", marginTop: 8 }}>{s}</div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

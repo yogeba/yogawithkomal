@@ -46,7 +46,7 @@ export default function FAQ({
               Don't see your question? Message me directly, I read every note.
             </p>
             <a
-              href={waLink("Hi Komal, I have a question.")}
+              href={waLink("Hi Komal, I have a question about your practice.")}
               target="_blank"
               rel="noopener"
               className="btn btn-wa"
