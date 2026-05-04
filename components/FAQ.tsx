@@ -5,7 +5,7 @@ import { FAQS, waLink } from "@/lib/data";
 
 export default function FAQ({
   items = FAQS,
-  number = "07",
+  number = "08",
 }: {
   items?: { q: string; a: string }[];
   number?: string;

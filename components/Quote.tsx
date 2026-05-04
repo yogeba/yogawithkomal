@@ -9,7 +9,7 @@ export default function Quote() {
     >
       <div className="wrap">
         <div className="rule reveal" style={{ marginBottom: 48 }}>
-          <span>05 · A note</span>
+          <span>06 · A note</span>
         </div>
         <h2
           className="h-serif reveal"

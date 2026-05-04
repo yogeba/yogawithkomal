@@ -3,6 +3,7 @@ import Marquee from "@/components/Marquee";
 import Practice from "@/components/Practice";
 import Ways from "@/components/Ways";
 import Offerings from "@/components/Offerings";
+import Reviews from "@/components/Reviews";
 import Quote from "@/components/Quote";
 import Instagram from "@/components/Instagram";
 import FAQ from "@/components/FAQ";
@@ -19,6 +20,7 @@ export default function Home() {
       <Practice />
       <Ways />
       <Offerings />
+      <Reviews />
       <Quote />
       <Instagram />
       <FAQ />

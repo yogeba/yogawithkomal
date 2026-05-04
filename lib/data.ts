@@ -3,18 +3,27 @@
 export const SITE = {
   name: "Yoga with Komal",
   tagline: "A space to move with awareness, come back home to yourself.",
-  url: "https://yogawithkomal.com",
+  url: "https://www.komal.yoga",
   description:
     "A somatic, women-friendly approach to movement with Komal. Embodied Hatha-Vinyasa, breath awareness, chanting, and reflection. Group classes, 1:1 sessions, and themed gatherings. Online and offline in Siliguri.",
   baseCity: "Siliguri",
   region: "West Bengal",
   country: "India",
+  countryCode: "IN",
+  postalCode: "734003",
+  streetAddress: "Eastern Bypass, Ward 42, Don Bosco Colony",
+  lat: 26.7503422,
+  lng: 88.4412846,
   startsOn: "2026-05-05",
 };
 
 export const WA_NUMBER = "917602454213";
 export const IG_URL = "https://www.instagram.com/releaseandrealize/";
 export const IG_HANDLE = "releaseandrealize";
+
+export const GOOGLE_PROFILE_URL =
+  "https://maps.app.goo.gl/RhQ8TiDggYwHC4V88";
+export const GOOGLE_PLACE_QUERY = "Yoga with Komal Siliguri";
 
 export function waLink(message: string) {
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
