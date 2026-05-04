@@ -9,7 +9,7 @@ export default function Offerings() {
     <section id="offerings" className="section">
       <div className="wrap">
         <div className="rule reveal" style={{ marginBottom: 56 }}>
-          <span>06 · Offerings</span>
+          <span>04 · Offerings</span>
         </div>
 
         <div
