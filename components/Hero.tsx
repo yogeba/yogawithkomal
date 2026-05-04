@@ -39,10 +39,10 @@ export default function Hero() {
               className="hero-bottom"
               style={{
                 marginTop: 36,
-                display: "grid",
-                gridTemplateColumns: "1fr auto",
-                gap: 40,
-                alignItems: "end",
+                display: "flex",
+                flexDirection: "column",
+                gap: 28,
+                alignItems: "flex-start",
               }}
             >
               <p className="body-lede" style={{ maxWidth: 520 }}>

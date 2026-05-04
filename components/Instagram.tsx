@@ -25,7 +25,7 @@ export default function Instagram() {
     <section id="ig" className="section">
       <div className="wrap">
         <div className="rule reveal" style={{ marginBottom: 48 }}>
-          <span>06 · Field notes · @releaseandrealize</span>
+          <span>07 · Field notes · @releaseandrealize</span>
         </div>
 
         <div
