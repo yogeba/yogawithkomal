@@ -59,13 +59,28 @@ Drop `content/matrix/<class-slug>--<city-slug>.mdx`. Example: `content/matrix/sl
 ### Replace placeholder photos
 Drop a real image into `public/img/` and update the `src` prop on the relevant `<Placeholder>` (Hero, Practice, Offerings, Instagram, OFFERINGS data). Class cards in `lib/data.ts > CLASSES[i].src` would surface a class-specific photo if added.
 
+## Western growth line (new, in progress)
+
+A second product line is being scoped: paid live online yoga + AI-assisted form feedback, sold to US/Europe customers who can't get to a studio. This is additive to the existing India-market site, not a replacement for it. Full research, decision log, and revenue model live in `docs/growth-plan.md` — this section is just the pointer + current state.
+
+- **Adjacent codebase**: `/Users/yogeba/Code/Bee` (MediaPipe + Gemini pose analysis). Current state is async only: record a clip, it goes to Gemini's Files API, a JSON review comes back later. No live/real-time correction, no multi-user session model exists yet. Never market this as "real-time AI correction," it isn't, today.
+- **ICP**: started with postpartum, deprioritized (not a liability call, Komal doesn't have postnatal-specific teaching expertise yet; a self-study roadmap toward it is in `docs/growth-plan.md`). Current data-backed primary pick is **chair yoga for homebound seniors** (60,500-110,000/mo search volume on root terms vs 3,600/mo postnatal). Same caveat applies here: Komal isn't senior/adaptive-yoga certified either. That expertise gap, not the market, is the real recurring blocker across every ICP considered so far.
+- **Payments**: unresolved. A Stripe account exists; its registration country and whether it's already processed international (non-INR) charges haven't been confirmed. That answer decides between using Stripe directly (Checkout + Billing + Tax) or routing through Paddle as merchant-of-record (India-registered Stripe accounts are invite-only, carry ~6% all-in cross-border fees, and lack native EU local payment methods like iDEAL).
+- **Live now**: `/chair-yoga-foundations` ($49 course + $19 order-bump bundle, Stripe Checkout via `app/api/checkout`, webhook at `app/api/webhooks/stripe`, payment-verified access page), `/chair-yoga-for-seniors` (real pillar SEO page, not matrix-generated), `/how-it-works` (honest live-class + async-AI-review explainer), `/terms` `/privacy` `/refund-policy`. `/postpartum-yoga-online` is **retired** — permanent redirect to `/` in `next.config.mjs`; `/postpartum-yoga-diastasis-recti` stays as supportive SEO content only, no longer linked to a paid offer.
+- **Growth bet, gated (not yet live)**: POTS/dysautonomia. Real market validated (durable multi-year paid competitors, ~5x post-COVID diagnosis growth) but gated behind Komal's self-study + teaching free sessions to real patients first — see `docs/growth-plan.md` section 5a. Do not build a POTS-specific page before that gate clears; when it does, reuse the existing Stripe/checkout infrastructure rather than building new.
+- **Not yet built**: the `SENIORS_MEMBERSHIP` live-class checkout/Cal.com wiring (course ships first), the "Chair Yoga Club" async-review recurring tier (the actual MRR lever — see growth-plan.md section on MRR), any POTS-facing page (gated, see above).
+- **Hard operating constraint**: Komal teaches at most 2 live sessions/day (1 group, 1 1:1) — caps live-teaching revenue at ~$2,480/mo fully booked. This is why recurring revenue has to come from a low-cost async-review subscription decoupled from live hours, not from live classes themselves. See `docs/growth-plan.md`.
+- **Payments still unconfirmed**: a Stripe account exists; registration country and international-charge history have never been confirmed despite repeated asks. This blocks real checkout regardless of ICP — resolve before assuming the built checkout flow actually works for a real US customer.
+
 ## Open TODOs (high signal)
 
-- `WA_NUMBER` in `lib/data.ts` is still `919999999999` placeholder. Must be replaced before launch.
-- `SITE.url` is `https://yogawithkomal.com` — verify the actual production domain when known and update (it feeds canonicals, JSON-LD, sitemap, OG).
+- `WA_NUMBER` in `lib/data.ts` is a real number now, no longer the placeholder — this line is stale, kept for history.
+- `SITE.url` is now `https://www.komal.yoga` in `lib/data.ts` — this line is stale too, the domain question is resolved.
 - All hero/about/offerings photos are 4 IG carousel slides with text overlays baked in. Clean photography would let the design breathe.
-- A `prenatal-yoga` SEO landing was deliberately skipped because liability requires RYT-certified prenatal training. Confirm Komal's certifications before adding.
+- A `prenatal-yoga` SEO landing was deliberately skipped because liability requires RYT-certified prenatal training. Confirm Komal's certifications before adding. The same open question now applies to postnatal and to any senior/adaptive-specific claim (see Western growth line above).
 - Matrix pages (78 of them) currently share a generated body. Google will tolerate this for a while but unique copy per page eventually wins. Add MDX overrides as time allows.
+- **Confirm the Stripe account's registration country and international-charge history** — blocks the Paddle-vs-direct-Stripe decision for the Western growth line.
+- **Decide and build the seniors flagship page** once the above is resolved, and downgrade `/postpartum-yoga-online` to a waitlist page rather than the lead offer.
 
 ## Conventions / gotchas
 
@@ -90,3 +105,4 @@ GitHub: `github.com/yogeba/yogawithkomal` under the `yogeba` account (gh CLI key
 
 - `static-v1` tag — the original single-file React-via-CDN `index.html` build, before Next.js migration.
 - `8aff934` — Next.js 15 + Tailwind + pSEO migration (this is HEAD as of the handoff).
+- 2026-07-16 — Western growth line scoped: full ICP/competitor/geo/payments/content research, two advisor ("Fable") passes, and the first-cut postpartum pages built before the ICP pivoted to chair-yoga-for-seniors on search-volume data. See `docs/growth-plan.md` for the full decision log and the pathway to the first $10k.

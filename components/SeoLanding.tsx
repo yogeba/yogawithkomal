@@ -17,6 +17,9 @@ type Props = {
   classSlug?: string;
   citySlug?: string;
   related?: { href: string; label: string }[];
+  ctaHref?: string;
+  ctaLabel?: string;
+  faqItems?: { q: string; a: string }[];
   children?: ReactNode;
 };
 
@@ -28,9 +31,13 @@ export default function SeoLanding({
   classSlug,
   citySlug,
   related,
+  ctaHref,
+  ctaLabel,
+  faqItems,
 }: Props) {
   const klass = classSlug ? CLASSES.find((c) => c.slug === classSlug) : null;
   const city = citySlug ? CITIES.find((c) => c.slug === citySlug) : null;
+  const faqs = faqItems || FAQS.slice(0, 6);
 
   return (
     <>
@@ -39,7 +46,7 @@ export default function SeoLanding({
         description={description}
         city={city ? city.name : undefined}
       />
-      <FAQPageLd items={FAQS.slice(0, 6)} />
+      <FAQPageLd items={faqs} />
 
       {/* Hero */}
       <section
@@ -64,15 +71,21 @@ export default function SeoLanding({
               {description}
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <a
-                href={waLink(`Hi Komal, I'm interested in ${h1.toLowerCase()}.`)}
-                target="_blank"
-                rel="noopener"
-                className="btn btn-wa"
-              >
-                <WhatsAppIcon />
-                Join via WhatsApp
-              </a>
+              {ctaHref ? (
+                <Link href={ctaHref} className="btn btn-wa">
+                  {ctaLabel || "Get started"}
+                </Link>
+              ) : (
+                <a
+                  href={waLink(`Hi Komal, I'm interested in ${h1.toLowerCase()}.`)}
+                  target="_blank"
+                  rel="noopener"
+                  className="btn btn-wa"
+                >
+                  <WhatsAppIcon />
+                  Join via WhatsApp
+                </a>
+              )}
               <Link href="/" className="btn btn-ghost">
                 Back to home
               </Link>
@@ -228,7 +241,7 @@ export default function SeoLanding({
         </section>
       ) : null}
 
-      <FAQ items={FAQS.slice(0, 6)} number="FAQ" />
+      <FAQ items={faqs} number="FAQ" />
       <CTA />
     </>
   );

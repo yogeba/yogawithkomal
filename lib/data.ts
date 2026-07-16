@@ -231,6 +231,14 @@ export type SeoLanding = {
   intent: "class" | "location" | "longtail";
   classSlug?: string;
   citySlug?: string;
+  /* Overrides for landings that aren't part of the India class×city matrix
+     (e.g. the US chair-yoga line) — without these, the page falls back to
+     a generic WhatsApp CTA, the site-wide FAQS, and cross-promo to
+     unrelated India landings, all wrong for a different product/audience. */
+  ctaHref?: string;
+  ctaLabel?: string;
+  faqOverride?: { q: string; a: string }[];
+  relatedOverride?: { href: string; label: string }[];
 };
 
 export const SEO_LANDINGS: SeoLanding[] = [
@@ -378,6 +386,47 @@ export const SEO_LANDINGS: SeoLanding[] = [
     intent: "longtail",
     classSlug: "alignment-hatha",
   },
+  {
+    slug: "postpartum-yoga-diastasis-recti",
+    title: "Postpartum Yoga for Diastasis Recti · Live Online Classes",
+    h1: "Postpartum yoga for diastasis recti",
+    description:
+      "A slow, listening-led return to core and breath after birth, for women managing ab separation. Live small-group classes, online, with an AI-assisted form review between sessions.",
+    intent: "longtail",
+    classSlug: "sunrise-1-1",
+  },
+  {
+    slug: "chair-yoga-for-seniors",
+    title: "Chair Yoga for Seniors · Online, Seated, Taught by a Real Teacher",
+    h1: "Chair yoga for seniors",
+    description:
+      "A gentle, seated practice for anyone who can't get to a studio or the floor, taught live and on-demand by a real teacher. For homebound seniors and the family choosing on their behalf.",
+    intent: "longtail",
+    ctaHref: "/chair-yoga-foundations",
+    ctaLabel: "Get the course · $49",
+    faqOverride: [
+      {
+        q: "Do I need to get down on the floor for any of this?",
+        a: "No. Everything is taught seated in a sturdy chair, with any standing work offered as an optional, supported extra.",
+      },
+      {
+        q: "Is this safe for my parent's specific condition?",
+        a: "Please check with their doctor first, this isn't medical advice. The course is built slowly on purpose: breath and seated setup before anything else.",
+      },
+      {
+        q: "What's the difference between the course and free options like SilverSneakers?",
+        a: "Free live options exist and are worth using if already available. What this adds is something you can buy today and hand to your parent directly, plus a form review that looks at their specific body, not a general class size.",
+      },
+      {
+        q: "Is this really taught by a real person?",
+        a: "Yes. Komal teaches every session herself, from Siliguri, India. See her practice on Instagram, linked in the footer.",
+      },
+    ],
+    relatedOverride: [
+      { href: "/chair-yoga-foundations", label: "Chair Yoga Foundations, the course" },
+      { href: "/how-it-works", label: "How the AI form review works" },
+    ],
+  },
 ];
 
 /* ----------------- Practice promises (reusable triplet) ----------------- */
@@ -447,6 +496,46 @@ export const OFFERINGS = [
     waMsg: "Hi Komal, I'm interested in your themed sessions, please keep me posted on the next one.",
   },
 ] as const;
+
+/* ----------------- Chair Yoga Foundations (US course, cold-traffic lead offer) ----------------- */
+export const CHAIR_YOGA_COURSE = {
+  slug: "chair-yoga-foundations",
+  name: "Chair Yoga Foundations",
+  sub: "A self-paced course for gentler mornings, taught seated, no floor work required.",
+  price: "$49",
+  priceIdCourseOnly: process.env.NEXT_PUBLIC_STRIPE_PRICE_COURSE_ONLY || "",
+  priceIdBundle: process.env.NEXT_PUBLIC_STRIPE_PRICE_COURSE_BUNDLE || "",
+  bundle: {
+    name: "Props Pack add-on",
+    price: "$19",
+    bundlePrice: "$65",
+    note: "A soft strap and two household-prop alternatives, mailed nowhere, just a short video on what to use around the house instead.",
+  },
+  modules: [
+    { n: 1, h: "Getting seated safely", p: "Chair setup, feet, spine, the two things worth checking before anything else." },
+    { n: 2, h: "Breath and shoulders", p: "Slow, seated breath work paired with shoulder and neck release." },
+    { n: 3, h: "Gentle full-body flow", p: "A 20-minute seated sequence, modifiable to how your morning actually feels." },
+    { n: 4, h: "Balance and standing support", p: "Optional standing-with-chair-support work, only when you're ready for it." },
+  ],
+  upsell:
+    "Members who want live sessions with Komal can join the Monthly Membership afterward. This course doesn't require it.",
+  waMsg: "Hi Komal, I have a question about the Chair Yoga Foundations course.",
+} as const;
+
+export const SENIORS_MEMBERSHIP = {
+  name: "Monthly Membership",
+  sub: "Live small-group chair yoga with Komal, plus an AI-assisted form review between sessions.",
+  schedule: "One live class a day, Monday through Friday, so there's always a session that fits your morning.",
+  perSessionCap: 10,
+  totalMemberCapNote:
+    "Kept small on purpose: capped at roughly 16-18 members so any single class never gets crowded, verified through booking, not a guess.",
+  price: "$89",
+  per: "/ month",
+  introPrice: "$69",
+  introNote:
+    "Introductory rate while the class is still filling toward capacity. Once it's consistently full, new members join at $89 — your rate stays locked once you're in.",
+  waMsg: "Hi Komal, I'm interested in the chair yoga monthly membership.",
+} as const;
 
 /* ----------------- FAQ (used on home and FAQPage JSON-LD) ----------------- */
 export const FAQS = [
