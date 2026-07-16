@@ -144,6 +144,11 @@ export default function Footer() {
           }}
         >
           <span>© 2026 Yoga with Komal · All rights reserved</span>
+          <div style={{ display: "flex", gap: 16 }}>
+            <a href="/terms">Terms</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/refund-policy">Refunds</a>
+          </div>
           <span>Made slowly.</span>
         </div>
       </div>

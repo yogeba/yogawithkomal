@@ -37,37 +37,43 @@ export default async function LandingPage({
 
   const doc = loadDoc("seo", slug);
 
-  /* Suggest related landings + relevant matrix pages */
-  const related: { href: string; label: string }[] = [];
+  /* Suggest related landings + relevant matrix pages, unless this landing
+     defines its own (e.g. the US chair-yoga line, which shouldn't cross-
+     promo into unrelated India-market pages). */
+  const related: { href: string; label: string }[] = landing.relatedOverride
+    ? [...landing.relatedOverride]
+    : [];
 
-  if (landing.classSlug) {
-    CITIES.slice(0, 6).forEach((city) => {
-      related.push({
-        href: `/yoga/${landing.classSlug}/${city.slug}`,
-        label: `${
-          CLASSES.find((c) => c.slug === landing.classSlug)?.name
-        } in ${city.name}`,
+  if (!landing.relatedOverride) {
+    if (landing.classSlug) {
+      CITIES.slice(0, 6).forEach((city) => {
+        related.push({
+          href: `/yoga/${landing.classSlug}/${city.slug}`,
+          label: `${
+            CLASSES.find((c) => c.slug === landing.classSlug)?.name
+          } in ${city.name}`,
+        });
       });
-    });
-  }
+    }
 
-  if (landing.citySlug) {
-    CLASSES.forEach((c) => {
-      related.push({
-        href: `/yoga/${c.slug}/${landing.citySlug}`,
-        label: `${c.name} in ${
-          CITIES.find((ci) => ci.slug === landing.citySlug)?.name
-        }`,
+    if (landing.citySlug) {
+      CLASSES.forEach((c) => {
+        related.push({
+          href: `/yoga/${c.slug}/${landing.citySlug}`,
+          label: `${c.name} in ${
+            CITIES.find((ci) => ci.slug === landing.citySlug)?.name
+          }`,
+        });
       });
-    });
-  }
+    }
 
-  /* Add a couple of cross-promo links to other landings */
-  SEO_LANDINGS.filter((l) => l.slug !== slug)
-    .slice(0, 4)
-    .forEach((l) =>
-      related.push({ href: `/${l.slug}`, label: l.h1 })
-    );
+    /* Add a couple of cross-promo links to other landings */
+    SEO_LANDINGS.filter((l) => l.slug !== slug)
+      .slice(0, 4)
+      .forEach((l) =>
+        related.push({ href: `/${l.slug}`, label: l.h1 })
+      );
+  }
 
   return (
     <SeoLanding
@@ -77,6 +83,9 @@ export default async function LandingPage({
       classSlug={landing.classSlug}
       citySlug={landing.citySlug}
       related={related}
+      ctaHref={landing.ctaHref}
+      ctaLabel={landing.ctaLabel}
+      faqItems={landing.faqOverride}
     />
   );
 }

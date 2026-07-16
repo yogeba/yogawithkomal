@@ -21,6 +21,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  for (const path of [
+    "/chair-yoga-foundations",
+    "/how-it-works",
+    "/terms",
+    "/privacy",
+    "/refund-policy",
+  ]) {
+    entries.push({
+      url: `${SITE.url}${path}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: path === "/chair-yoga-foundations" ? 0.95 : 0.3,
+    });
+  }
+
   for (const c of CLASSES) {
     for (const city of CITIES) {
       entries.push({
